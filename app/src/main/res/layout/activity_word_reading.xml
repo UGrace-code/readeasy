@@ -8,7 +8,6 @@
     android:background="@drawable/background2"
     tools:context=".WordReadingActivity">
 
-    <!-- Back Button -->
     <ImageView
         android:id="@+id/btn_back"
         android:layout_width="73dp"
@@ -23,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Instruction Text: Properly constrained below the back button -->
+   
     <TextView
         android:id="@+id/tv_instruction"
         android:layout_width="0dp"
@@ -41,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_back" />
 
-    <!-- Word Card -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/word_card"
         android:layout_width="0dp"
@@ -70,7 +69,7 @@
             tools:text="HOUSE" />
     </androidx.cardview.widget.CardView>
 
-    <!-- Bottom Control Panel -->
+   
     <LinearLayout
         android:id="@+id/bottom_control_panel"
         android:layout_width="0dp"
@@ -83,7 +82,7 @@
         app:layout_constraintEnd_toStartOf="@+id/iv_game_mascot"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Speaker Button -->
+        
         <ImageView
             android:id="@+id/btn_speaker"
             android:layout_width="80dp"
@@ -97,7 +96,7 @@
             android:src="@drawable/microphone"
             tools:ignore="ContentDescription" />
 
-        <!-- Next Button -->
+       
         <Button
             android:id="@+id/btn_next"
             android:layout_width="0dp"
@@ -115,7 +114,7 @@
 
     </LinearLayout>
 
-    <!-- Game Mascot -->
+    
     <ImageView
         android:id="@+id/iv_game_mascot"
         android:layout_width="90dp"
