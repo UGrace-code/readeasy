@@ -81,9 +81,6 @@ public class WordReadingActivity extends AppCompatActivity {
         MusicManager.shutdownTTS();
     }
 
-    // ============================================================
-    //  The rest of your code remains the same. No changes needed.
-    // ============================================================
 
     private void initializeFirebase() {
         db = FirebaseFirestore.getInstance();
