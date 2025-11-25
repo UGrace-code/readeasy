@@ -41,7 +41,7 @@ public class DashboardActivity extends AppCompatActivity {
         initializeViews();
         setupClickListeners();
 
-        // This is the fix for the user's name, which is correct
+        
         updateWelcomeMessage();
     }
 
@@ -61,10 +61,10 @@ public class DashboardActivity extends AppCompatActivity {
         btnWordReading.setOnClickListener(v -> startActivity(new Intent(this, WordReadingActivity.class)));
         btnSettings.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
         btnProgress.setOnClickListener(v -> startActivity(new Intent(this, ProgressActivity.class)));
-        // You can add a listener for btnDyslexiaInfo here if needed
+ 
     }
 
-    // This method to get the user's name is correct.
+   
     private void updateWelcomeMessage() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
@@ -79,7 +79,7 @@ public class DashboardActivity extends AppCompatActivity {
                 tvWelcome.setText(" HI FRIEND!");
             }
         } else {
-            // Fallback for safety
+            // Fallback 
             tvWelcome.setText("WELCOME!");
         }
     }
