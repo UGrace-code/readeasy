@@ -14,13 +14,13 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-import android.widget.ImageView; // Added for the back button
+import android.widget.ImageView; 
 
 public class SignupActivity extends AppCompatActivity {
 
     private EditText etName, etEmail, etPassword;
     private MaterialButton btnSignup;
-    private ImageView btnGoToLogin; // Changed from MaterialButton to ImageView
+    private ImageView btnGoToLogin; 
     private FirebaseAuth mAuth;
 
     @SuppressLint("WrongViewCast")
