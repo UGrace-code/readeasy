@@ -53,7 +53,6 @@ public class WordReadingActivity extends AppCompatActivity {
         initializeViews();
         initializeWordList();
 
-        // Start the first word after a small delay to ensure TTS is ready
         new Handler(Looper.getMainLooper()).postDelayed(this::showNextWord, 500);
 
         btnBack.setOnClickListener(v -> finish());
@@ -63,21 +62,21 @@ public class WordReadingActivity extends AppCompatActivity {
 
     private void speakText(String text) {
         if (text == null || text.isEmpty()) return;
-        // ** 2. USE THE MUSIC MANAGER TO SPEAK **
+        
         com.grace.readeasy.MusicManager.speak(this, text);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // ** 3. UPDATE MUSIC STATE ON RESUME **
+     
         com.grace.readeasy.MusicManager.updateMusicState(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // ** 4. SHUT DOWN TTS WHEN ACTIVITY IS DESTROYED **
+       
         MusicManager.shutdownTTS();
     }
 
