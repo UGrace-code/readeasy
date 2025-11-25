@@ -16,9 +16,9 @@ import com.grace.readeasy.R;
 public class SettingsActivity extends AppCompatActivity {
 
     private ImageView btnBack;
-    private SwitchCompat switchMusic, switchVoice; // Added switchVoice
+    private SwitchCompat switchMusic, switchVoice; 
 
-    // --- NEW: Buttons for font size ---
+   
     private Button btnSmall, btnMedium, btnLarge;
 
     private static final String PREFS_NAME = "SettingsPrefs";
@@ -29,7 +29,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Apply theme before setting content view
+        
         applyTheme();
         setContentView(R.layout.activity_settings);
 
@@ -41,9 +41,9 @@ public class SettingsActivity extends AppCompatActivity {
     private void initializeViews() {
         btnBack = findViewById(R.id.btn_back);
         switchMusic = findViewById(R.id.switch_music);
-        switchVoice = findViewById(R.id.switch_voice); // Make sure this ID is in your XML
+        switchVoice = findViewById(R.id.switch_voice);
 
-        // --- NEW: Initialize font size buttons ---
+  
         btnSmall = findViewById(R.id.btn_font_small);
         btnMedium = findViewById(R.id.btn_font_medium);
         btnLarge = findViewById(R.id.btn_font_large);
@@ -68,7 +68,7 @@ public class SettingsActivity extends AppCompatActivity {
             saveBooleanPreference(VOICE_ENABLED_KEY, isChecked);
         });
 
-        // --- NEW: Click listeners for font buttons ---
+       
         btnSmall.setOnClickListener(v -> saveFontSizeAndRecreate(0)); // 0 for small
         btnMedium.setOnClickListener(v -> saveFontSizeAndRecreate(1)); // 1 for medium
         btnLarge.setOnClickListener(v -> saveFontSizeAndRecreate(2)); // 2 for large
@@ -100,15 +100,7 @@ public class SettingsActivity extends AppCompatActivity {
         btnMedium.setBackgroundColor(currentSize == 1 ? selectedColor : defaultColor);
         btnLarge.setBackgroundColor(currentSize == 2 ? selectedColor : defaultColor);
     }
-// In SettingsActivity.java
 
-    /**
-     * A helper method to get the current theme resource ID based on the saved font size.
-     * This method is 'static' so it can be called from other activities without creating a new SettingsActivity.
-     *
-     * @param context The context of the activity calling this method.
-     * @return The resource ID of the theme to apply (e.g., R.style.AppTheme_Small).
-     */
     public static int getTheme(Context context) {
         int fontSize = getFontSize(context);
         switch (fontSize) {
@@ -145,7 +137,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
-    // --- STATIC HELPER METHODS ---
+  -
 
     public static boolean isMusicEnabled(Context context) {
         SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
