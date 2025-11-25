@@ -21,16 +21,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ProgressActivity extends AppCompatActivity {
 
-    // --- Views ---
+    
     private ImageView btnBack;
     private ProgressBar progressWordReading, progressPhonics, progressLetterRecognition, progressOverall;
     private TextView tvLetterProgressPercent, tvWordProgressPercent, tvPhonicsProgressPercent, tvOverallProgress;
 
-    // --- Firebase ---
+    
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
-    // --- Constants for calculation ---
     private static final int TOTAL_LETTERS = 26;
     private static final int TOTAL_PHONICS_QUESTIONS = 4;
     private static final int TOTAL_READING_WORDS = 70;
