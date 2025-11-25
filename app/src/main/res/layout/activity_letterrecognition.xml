@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Instruction Text: Now properly constrained below the back button -->
+ 
     <TextView
         android:id="@+id/tv_instruction"
         android:layout_width="0dp"
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_panel" />
-    <!-- Letter cards will be added programmatically and constrained to this Flow -->
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
