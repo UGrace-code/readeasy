@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Theme Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App-Specific Colors from your design -->
+
+    <!-- Backgrounds -->
+    <color name="background_light_teal">#E0F7FA</color> <!-- A light, pleasant background color -->
+    <color name="card_background">#FFFFFF</color>     <!-- The background for your CardView -->
+
+    <!-- Text -->
+    <color name="text_dark_blue">#0D47A1</color>      <!-- For titles and important text -->
+
+    <!-- Buttons & Accents -->
+    <color name="vibrant_orange_light">#FFA726</color> <!-- The main color for your start button -->
+    <color name="yellow_accent">#FFC107</color>       <!-- A general-purpose yellow -->
+
+    <!-- New Colors You Requested -->
+    <color name="light_blue_bg">#B3E5FC</color>        <!-- A light blue for other backgrounds -->
+    <color name="light_sky_blue">#C6FCFF</color>
+
+    <!-- Vibrant Colors for Alphabet Grid -->
+    <color name="vibrant_pink">#EC407A</color>
+
+    <!-- CORRECTED: Each color tag is now on its own line -->
+    <color name="vibrant_blue">#42A5F5</color>
+    <color name="vibrant_light_green">#9CCC65</color>
+
+    <color name="vibrant_sky_blue">#29B6F6</color>
+    <color name="vibrant_yellow">#FFCA28</color>
+    <color name="vibrant_orange">#FFA726</color>
+    <color name="vibrant_green">#66BB6A</color>
+
+</resources>
+
+
+
+
+

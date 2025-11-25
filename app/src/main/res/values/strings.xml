@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Read Easy</string>
+    <string name="hello_title">Dear Friend!</string>
+    <string name="hello_subtitle">Let’s learn to read together!</string>
+    <string name="start_button">Click to start!</string>
+    <string name="cat_reading">Cat reading on books</string>
+</resources>

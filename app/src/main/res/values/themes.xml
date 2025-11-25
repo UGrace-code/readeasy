@@ -1,0 +1,137 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ReadEasy" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->    </style>
+
+    <!-- Style for the alphabet letter cards -->
+    <!-- CORRECTED: Changed parent to a Material 3 widget style -->
+    <!-- Style for the alphabet letter cards -->
+    <style name="AlphabetCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+
+    <!-- Style for the text inside the alphabet cards -->
+    <style name="AlphabetLetter">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/comicsans</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Base Style for Progress Cards -->
+    <style name="ProgressCard">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <!-- Style for the LinearLayout inside each progress card -->
+    <style name="ProgressCardContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Style for the title text on each progress card -->
+    <style name="ProgressCardTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:fontFamily">@font/comicsans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/vibrant_pink</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Base Style for each settings card -->
+    <!-- Base Style for each settings card -->
+    <style name="SettingsCard" parent="Widget.Material3.CardView.Elevated"><item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:backgroundTint">@color/vibrant_sky_blue</item>
+    </style>
+
+
+
+
+    <!-- Style for the ConstraintLayout inside each card -->
+    <style name="SettingsCardContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+
+    </style>
+
+    <!-- Style for the main title on each card (e.g., "Sound & Voice") -->
+    <style name="SettingsCardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_dark_blue</item>
+        <item name="android:fontFamily">@font/comicsans</item>
+    </style>
+
+    <!-- Style for the setting labels (e.g., "Music", "Font Size") -->
+    <style name="SettingsLabel" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_dark_blue</item>
+        <item name="android:fontFamily">@font/comicsans</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Readeasy" parent="Theme.Material3.DayNight.NoActionBar"><!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Readeasy" parent="Base.Theme.Readeasy" />
+
+    <!-- *** ADD THESE THEME STYLES *** -->
+
+    <!-- Base AppTheme -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Common attributes can go here -->
+    </style>
+
+    <!-- Medium Font Size Theme (Default) -->
+    <style name="AppTheme.Medium" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+        <!-- You can define other text size attributes here for titles, buttons etc. -->
+    </style>
+
+    <!-- Small Font Size Theme -->
+    <style name="AppTheme.Small" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Large Font Size Theme -->
+    <style name="AppTheme.Large" parent="AppTheme">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+
+
+
+    </resources>
+
+
+
+

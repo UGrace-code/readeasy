@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".SettingsActivity">
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Banner -->
+
+    <!-- ============================================= -->
+    <!-- Card 1: Sound & Voice                         -->
+    <!-- ============================================= -->
+    <ImageView
+        android:id="@+id/iv_title_banner"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_sound"
+        style="@style/SettingsCard"
+        app:layout_constraintTop_toBottomOf="@id/iv_title_banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card_visuals"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <!-- The content for this card is now INSIDE the MaterialCardView -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/SettingsCardContent">
+
+            <ImageView
+                android:id="@+id/icon_sound"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/owl"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_sound"
+                style="@style/SettingsCardTitle"
+                android:text="Sound &amp; Voice"
+                app:layout_constraintStart_toEndOf="@id/icon_sound"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_music"
+                style="@style/SettingsLabel"
+                android:text="Music"
+                app:layout_constraintBottom_toTopOf="@+id/label_voice"
+                app:layout_constraintStart_toStartOf="@id/title_sound"
+                app:layout_constraintTop_toBottomOf="@id/title_sound" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="@id/label_music"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/label_music" />
+
+            <TextView
+                android:id="@+id/label_voice"
+                style="@style/SettingsLabel"
+                android:text="Voice Narration"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/title_sound"
+                app:layout_constraintTop_toBottomOf="@+id/label_music" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="@id/label_voice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/label_voice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ============================================= -->
+    <!-- Card 2: Visuals & Text                        -->
+    <!-- ============================================= -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_visuals"
+        style="@style/SettingsCard"
+        app:layout_constraintTop_toBottomOf="@id/card_sound"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- The content for this card is now INSIDE the MaterialCardView -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/SettingsCardContent">
+
+            <ImageView
+                android:id="@+id/icon_visuals"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/dino"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_visuals"
+                style="@style/SettingsCardTitle"
+                android:text="Visuals &amp; Text"
+                app:layout_constraintStart_toEndOf="@id/icon_visuals"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_font_size"
+                style="@style/SettingsLabel"
+                android:layout_marginTop="8dp"
+                android:text="Font Size"
+                app:layout_constraintStart_toStartOf="@id/title_visuals"
+                app:layout_constraintTop_toBottomOf="@id/title_visuals" />
+
+            <!-- FONT SIZE BUTTONS (REPLACED THE SEEKBAR) -->
+            <LinearLayout
+                android:id="@+id/font_size_buttons_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/label_font_size"
+                app:layout_constraintTop_toBottomOf="@id/label_font_size">
+
+                <!-- Small Font Button -->
+                <Button
+                    android:id="@+id/btn_font_small"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="S"
+                    app:cornerRadius="15dp" />
+
+                <!-- Medium Font Button -->
+                <Button
+                    android:id="@+id/btn_font_medium"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="M"
+                    app:cornerRadius="15dp" />
+
+                <!-- Large Font Button -->
+                <Button
+                    android:id="@+id/btn_font_large"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="L"
+                    app:cornerRadius="15dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

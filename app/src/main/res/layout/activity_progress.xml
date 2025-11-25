@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".ProgressActivity">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="73dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- "Your Progress" Banner Image -->
+    <ImageView
+        android:id="@+id/iv_progress_banner"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/progressbanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        tools:ignore="ContentDescription" />
+
+    <!-- Overall Progress Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_overall_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_progress_banner">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_overall_title"
+                android:layout_width="340dp"
+                android:layout_height="117dp"
+                android:fontFamily="@font/comicsans"
+                android:text="Overall Completion"
+                android:textColor="@color/text_dark_blue"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_overall_progress"
+                android:layout_width="64dp"
+                android:layout_height="53dp"
+                android:fontFamily="@font/comicsans"
+                android:textColor="@color/vibrant_light_green"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="75%" />
+
+            <ProgressBar
+                android:id="@+id/progress_overall"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="12dp"
+                android:progressDrawable="@drawable/progressbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_overall_progress"
+                tools:progress="75" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Word Reading Section -->
+    <TextView
+        android:id="@+id/tv_word_reading_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/comicsans"
+        android:text="Word Reading"
+        android:textColor="@color/vibrant_orange_light"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_overall_progress" />
+
+    <TextView
+        android:id="@+id/tv_word_progress_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/comicsans"
+        android:textColor="@color/vibrant_orange_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_word_reading_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_word_reading_title"
+        tools:text="80%" />
+
+    <ProgressBar
+        android:id="@+id/progress_word_reading"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintEnd_toStartOf="@id/tv_word_progress_percent"
+        app:layout_constraintStart_toStartOf="@id/tv_word_reading_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_word_reading_title"
+        tools:progress="80" />
+
+    <!-- Phonics Fun Section -->
+    <TextView
+        android:id="@+id/tv_phonics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/comicsans"
+        android:text="Phonics Fun"
+        android:textColor="@color/vibrant_orange_light"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tv_word_reading_title"
+        app:layout_constraintTop_toBottomOf="@id/progress_word_reading" />
+
+    <TextView
+        android:id="@+id/tv_phonics_progress_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comicsans"
+        android:textColor="@color/vibrant_orange"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_phonics_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_word_progress_percent"
+        app:layout_constraintTop_toTopOf="@id/tv_phonics_title"
+        tools:text="50%" />
+
+    <ProgressBar
+        android:id="@+id/progress_phonics"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintEnd_toEndOf="@id/progress_word_reading"
+        app:layout_constraintStart_toStartOf="@id/tv_phonics_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_phonics_title"
+        tools:progress="50" />
+
+    <!-- Letter Recognition Section -->
+    <TextView
+        android:id="@+id/tv_letter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/comicsans"
+        android:text="Letter Recognition"
+        android:textColor="@color/vibrant_orange"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tv_phonics_title"
+        app:layout_constraintTop_toBottomOf="@id/progress_phonics" />
+
+    <TextView
+        android:id="@+id/tv_letter_progress_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comicsans"
+        android:textColor="@color/vibrant_orange"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_letter_title"
+        app:layout_constraintEnd_toEndOf="@id/tv_phonics_progress_percent"
+        app:layout_constraintTop_toTopOf="@id/tv_letter_title"
+        tools:text="95%" />
+
+    <ProgressBar
+        android:id="@+id/progress_letter_recognition"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintEnd_toEndOf="@id/progress_phonics"
+        app:layout_constraintStart_toStartOf="@id/tv_letter_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_letter_title"
+        tools:progress="95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
