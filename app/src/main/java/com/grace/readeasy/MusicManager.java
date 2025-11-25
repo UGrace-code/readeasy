@@ -20,13 +20,11 @@ public class MusicManager {
     private static TextToSpeech textToSpeech;
     private static boolean isTtsInitialized = false;
 
-    // --- Shared Preferences Keys ---
+
     private static final String PREFS_NAME = "SettingsPrefs";
     private static final String MUSIC_ENABLED_KEY = "MusicEnabled";
 
-    // =========================================================================
-    //  TEXT-TO-SPEECH (TTS) METHODS
-    // =========================================================================
+    
 
     public static void initializeTTS(Context context) {
         if (isTtsInitialized) return;
@@ -66,9 +64,7 @@ public class MusicManager {
     }
 
 
-    // =========================================================================
-    //  BACKGROUND MUSIC METHODS
-    // =========================================================================
+   
 
     static boolean isMusicEnabled(Context context) {
         SharedPreferences settings = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
