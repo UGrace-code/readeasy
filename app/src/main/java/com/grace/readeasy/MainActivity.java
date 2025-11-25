@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText etEmail, etPassword;
     private MaterialButton btnLogin, btnGoToSignup;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Applying the theme
