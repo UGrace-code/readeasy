@@ -100,16 +100,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // --- DELEGATE TO MUSICMANAGER ---
-        // Let the central manager decide if music should play.
+        
         MusicManager.updateMusicState(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        // --- DELEGATE TO MUSICMANAGER ---
-        // Let the central manager handle pausing if the app goes to the background.
+     
         MusicManager.pauseMusic();
     }
 }
